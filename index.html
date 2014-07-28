@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>Flying Colors</title>
+	
+	<!-- META DATA -->
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Flying Colors">
+	<meta name="author" content="Design and Development by Matthew Padich and Dan Tintle.">
+
+	<!-- JS -->
+	
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="js/jquery.bxslider.js"></script>
+	<script src="js/waypoints.js"></script>
+	<script src="js/waypoints-sticky.min.js"></script>
+	
+	<!-- CSS -->
+	
+	<link type="text/css" rel="stylesheet" href="css/bootstrap.css" />
+	<link type="text/css" rel="stylesheet" href="css/animate.css" />
+	<link type="text/css" rel="stylesheet" href="css/style.css" />
+	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<!-- BoxSlider -->
+
+	<link href="css/jquery.bxslider.css" rel="stylesheet">
+	
+
+
+	<!-- FONTS -->
+	<link href='http://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
+
+
+
+</head>
+<body>
+
+
+	<header>
+
+		
+		<h1>Flying Colors<img src="images/butterfly.png"> Second Nature</h1>
+
+		<div id="sticky-banner">
+			<h2>Pre-Order Available Now From <img src="images/mascot.png"> </h2>
+
+		</div>
+
+
+	</header>
+
+	<div id="background-wrapper">
+	</div>
+	<div id="background-wrapper-two">
+	</div>
+
+	<div id="main">
+
+		<div id="packshot-container">
+			
+			<!-- <ul class="bxslider">
+				<li><img id="small-package" title="This package is cool." src="images/package-one.png" /></li>
+				<li><img title="This package is cool." src="images/packshot-vinyl.png" /></li>
+				<li><img class="t-shirt" title="This package is cool." src="images/tee-one.png" /></li>
+			  	<li><img class="t-shirt" title="This package is cool." src="images/tee-two.png" /></li>
+			</ul>
+
+		</div> -->
+
+		<ul id="packages">
+			<li><a href=""><img id="package-one" src="images/package-one.png"></a></li>
+			<li><a href=""><img id="packshot-vinyl" src="images/packshot-vinyl.png"></a></li>
+			<li><a href=""><img src="images/tee-one.png"></a></li>
+			<li><a href=""><img src="images/tee-two.png"></a></li>
+
+
+		</ul>
+
+
+
+
+	</div>
+
+		<div id ="media-container">
+
+			<iframe src="http://www.youtube.com/embed/0IDyGrc1Z8k" frameborder="0" allowfullscreen></iframe>
+
+		</div>
+
+		<div id="tracklist-container">
+
+			<ul id="main-ul">
+
+				<li id="album">
+
+					<img src="images/album.jpg">
+
+				</li>
+				<li id="track-list">
+					<ul id="listing-ul">
+						<li>1. Open Up Your Eyes (12.24)</li>
+						<li>2. Mask Machine (6.06)</li>
+						<li>3. Bombs Away (5.03)</li>
+						<li>4. The Fury Of My Love (5.10)</li>
+						<li>5. A Place In Your World (6.25)</li>
+						<li>6. Lost Without You (4.46)</li>
+						<li>7. One Love Forever (7.17)</li>
+						<li>8. Peaceful Harbor (7.01)</li>
+						<li>9. Cosmic Symphony (11.46)
+							<ul>
+								<li>I. Still Life Of The World</li>
+								<li>II. Searching For The Air</li>
+								<li>III. Pound For Pound</li>
+
+
+							</ul>
+						</li>
+
+					</ul>
+
+
+				</li>
+
+
+			</ul>
+
+		</div>
+
+		<!-- end tracklist container -->
+
+		<div id="tour-dates-container">
+			<ul id="tour-dates">
+				<li>10/2 Los Angeles, CA <span>James Armstrong Theather</span></li>
+				<li>10/3 Chicago, IL <span>Arcada Theater</span></li>
+				<li>10/4 Philadelphia, PA <span>Keswick Theater</span></li>
+				<li>10/7 Barcelona, Spain <span>Razzmatazz 2</span></li>
+				<li>10/8 Milan, Italy <span>Milan Live Club</span></li>
+				<li>10/9 Tilburg, Netherlands <span>013</span></li>
+				<li>10/11 Frankfurt, Germany <span>Batschkapp</span></li>
+				<li>10/12 Pratteln, Switzerland <span>Z7</span></li>
+				<li>10/13 London, UK <span>Islington Assembly Hall</li>
+				<li>10/14 Paris, France <span>Alhambra</span></li>
+			</ul>
+
+
+		</div>
+
+
+	<footer>
+
+		<div></div>
+
+	</footer>
+
+
+
+	</div>
+
+
+<script type="text/javascript">
+
+$(window).load(init);
+
+function init() {
+
+	$('.bxslider').bxSlider();
+	$('header h1').addClass('animated fadeIn');
+	$('header h2').addClass('animated fadeInLeft');
+	$('#packshot-container').addClass('animated fadeInRight');
+	
+
+	//function to change background positioning
+	$('#packshot-container').waypoint(function() {
+
+		$('#background-wrapper').animate({'opacity': '0'}, 750);
+		$('#background-wrapper-two').animate({'opacity': '1'}, 750);
+
+	});
+
+	//sticky header!
+
+	$('#sticky-banner').waypoint('sticky');
+}
+
+
+</script>
+
+</body>
+</html>
